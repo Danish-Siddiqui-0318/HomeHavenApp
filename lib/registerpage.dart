@@ -23,7 +23,7 @@ class Registerpage extends StatelessWidget {
                 alignment: Alignment.topLeft,
                 child: GestureDetector(
                   onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: ()=>))
+                    // Navigator.push(context, MaterialPageRoute(builder: ()=>))
                   },
                   child: Text(
                     " Create Account ",
