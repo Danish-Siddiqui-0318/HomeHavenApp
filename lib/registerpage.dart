@@ -1,3 +1,4 @@
+import 'package:ecomm_app/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -21,14 +22,9 @@ class Registerpage extends StatelessWidget {
             children: [
               Align(
                 alignment: Alignment.topLeft,
-                child: GestureDetector(
-                  onTap: (){
-                    // Navigator.push(context, MaterialPageRoute(builder: ()=>))
-                  },
-                  child: Text(
-                    " Create Account ",
-                    style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
-                  ),
+                child: Text(
+                  " Create Account ",
+                  style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
                 ),
               ),
               SizedBox(height: 8),
@@ -141,9 +137,17 @@ class Registerpage extends StatelessWidget {
                   color: Color(0xFF156651),
                   borderRadius: BorderRadius.circular(12),
                 ),
-                child: Text(
-                  "Create Account",
-                  style: TextStyle(color: Colors.white, fontSize: 20),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Homepage()),
+                    );
+                  },
+                  child: Text(
+                    "Create Account",
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
                 ),
               ),
               SizedBox(height: 30),
