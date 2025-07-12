@@ -1,9 +1,10 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:ecomm_app/splash.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart'; // <-- Import ScreenUtil
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -11,11 +12,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      color: Colors.green.shade900,
-      debugShowCheckedModeBanner: false,
-      // home: AnimatedSplashScreen(splash: Splash(), nextScreen: OnBoardScreen()),
-      home: Splash(),
+    return ScreenUtilInit(
+      designSize: const Size(390, 844), // You can change this to your original design size
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) {
+        return MaterialApp(
+          color: Colors.green.shade900,
+          debugShowCheckedModeBanner: false,
+          home: const Splash(), // or use AnimatedSplashScreen if needed
+        );
+      },
     );
   }
 }

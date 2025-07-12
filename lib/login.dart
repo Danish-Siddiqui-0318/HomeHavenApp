@@ -2,6 +2,7 @@ import 'package:ecomm_app/registerpage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class loginPage extends StatelessWidget {
   const loginPage({super.key});
@@ -9,7 +10,6 @@ class loginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Colors.grey.shade300,
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -19,31 +19,31 @@ class loginPage extends StatelessWidget {
           ),
         ),
         child: Padding(
-          padding: const EdgeInsets.only(top: 100),
+          padding: EdgeInsets.only(top: 100.h),
           child: Column(
             children: [
               Align(
                 alignment: Alignment.topLeft,
                 child: Text(
                   " Welcome Back! ",
-                  style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 28.sp, fontWeight: FontWeight.bold),
                 ),
               ),
               Align(
                 alignment: Alignment.topLeft,
                 child: Text(
                   "  Enter your email to start shopping and get\n  awesome deals today!",
-                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w300),
+                  style: TextStyle(fontSize: 15.sp, fontWeight: FontWeight.w300),
                 ),
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 30.h),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 12),
+                padding: EdgeInsets.symmetric(horizontal: 12.w),
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(12.r),
                 ),
-                width: 380,
+                width: 380.w,
                 child: TextField(
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.mail),
@@ -51,18 +51,18 @@ class loginPage extends StatelessWidget {
                     border: InputBorder.none,
                     enabledBorder: InputBorder.none,
                     focusedBorder: InputBorder.none,
-                    labelStyle: TextStyle(color: Colors.black),
+                    labelStyle: TextStyle(color: Colors.black, fontSize: 16.sp),
                   ),
                 ),
               ),
-              SizedBox(height: 25),
+              SizedBox(height: 25.h),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 12),
+                padding: EdgeInsets.symmetric(horizontal: 12.w),
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(12.r),
                 ),
-                width: 380,
+                width: 380.w,
                 child: TextField(
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.lock),
@@ -71,113 +71,110 @@ class loginPage extends StatelessWidget {
                     border: InputBorder.none,
                     enabledBorder: InputBorder.none,
                     focusedBorder: InputBorder.none,
-                    labelStyle: TextStyle(color: Colors.black),
+                    labelStyle: TextStyle(color: Colors.black, fontSize: 16.sp),
                   ),
                 ),
               ),
-              SizedBox(height: 15),
+              SizedBox(height: 15.h),
               Align(
                 alignment: Alignment.topLeft,
                 child: Text(
                   "  Forgot Your Password?",
                   style: TextStyle(
-                    fontSize: 15,
+                    fontSize: 15.sp,
                     fontWeight: FontWeight.w400,
                     color: Color(0xFF156651),
                   ),
                 ),
               ),
-              SizedBox(height: 25),
+              SizedBox(height: 25.h),
               Container(
-                margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                padding: EdgeInsets.only(top: 5),
+                margin: EdgeInsets.fromLTRB(10.w, 0, 10.w, 0),
+                padding: EdgeInsets.only(top: 5.h),
                 alignment: Alignment.center,
                 width: double.infinity,
-                // color: Colors.green.shade900,
-                height: 50,
+                height: 50.h,
                 decoration: BoxDecoration(
                   color: Color(0xFF156651),
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(12.r),
                 ),
                 child: Text(
                   "Login",
-                  style: TextStyle(color: Colors.white, fontSize: 20),
+                  style: TextStyle(color: Colors.white, fontSize: 20.sp),
                 ),
               ),
-              SizedBox(height: 35),
+              SizedBox(height: 35.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Container(height: 1, width: 180, color: Colors.grey),
-                  Text("OR"),
-                  Container(height: 1, width: 175, color: Colors.grey),
+                  Container(height: 1.h, width: 180.w, color: Colors.grey),
+                  Text("OR", style: TextStyle(fontSize: 16.sp)),
+                  Container(height: 1.h, width: 175.w, color: Colors.grey),
                 ],
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 30.h),
               Container(
-                margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                padding: EdgeInsets.only(top: 5),
+                margin: EdgeInsets.fromLTRB(10.w, 0, 10.w, 0),
+                padding: EdgeInsets.only(top: 5.h),
                 alignment: Alignment.center,
                 width: double.infinity,
-                // color: Colors.green.shade900,
-                height: 50,
+                height: 50.h,
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(12.r),
                   border: Border.all(color: Color(0xFF156651)),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(FontAwesomeIcons.google),
-                    SizedBox(width: 10),
+                    Icon(FontAwesomeIcons.google, size: 20.sp),
+                    SizedBox(width: 10.w),
                     Text(
                       "Log in with Google",
                       style: TextStyle(
                         color: Color(0xFF156651),
-                        fontSize: 20,
+                        fontSize: 20.sp,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                   ],
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 20.h),
               Container(
-                margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                padding: EdgeInsets.only(top: 5),
+                margin: EdgeInsets.fromLTRB(10.w, 0, 10.w, 0),
+                padding: EdgeInsets.only(top: 5.h),
                 alignment: Alignment.center,
                 width: double.infinity,
-                // color: Colors.green.shade900,
-                height: 50,
+                height: 50.h,
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(12.r),
                   border: Border.all(color: Color(0xFF156651)),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.facebook, color: Colors.blue.shade700),
-                    SizedBox(width: 10),
+                    Icon(Icons.facebook, color: Colors.blue.shade700, size: 22.sp),
+                    SizedBox(width: 10.w),
                     Text(
                       "Log in with Facebook",
                       style: TextStyle(
                         color: Color(0xFF156651),
-                        fontSize: 20,
+                        fontSize: 20.sp,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                   ],
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 20.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     "Don't have an account?",
-                    style: TextStyle(fontWeight: FontWeight.w300),
+                    style: TextStyle(fontWeight: FontWeight.w300, fontSize: 15.sp),
                   ),
                   TextButton(
                     onPressed: () {
@@ -191,6 +188,7 @@ class loginPage extends StatelessWidget {
                       style: TextStyle(
                         color: Color(0xFF156651),
                         fontWeight: FontWeight.w300,
+                        fontSize: 15.sp,
                       ),
                     ),
                   ),

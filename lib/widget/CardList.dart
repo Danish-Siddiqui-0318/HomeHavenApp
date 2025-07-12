@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class cardlist extends StatelessWidget {
   cardlist({super.key});
@@ -30,21 +31,17 @@ class cardlist extends StatelessWidget {
     },
   ];
 
-  // "https://i.ibb.co/5XT1Fk2p/Image.png",
-  // "https://i.ibb.co/1Y2y9L5W/Image-1.png",
-  // "https://i.ibb.co/XZKnJdQR/Image-3.png",
-  // "https://i.ibb.co/PvM5wBb3/Image-5.png"
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
       scrollDirection: Axis.horizontal,
+      itemCount: cardProducts.length,
       itemBuilder: (context, index) => ProductCard(
         name: cardProducts[index]['name'],
         imgPath: cardProducts[index]['imgpath'],
         price: cardProducts[index]['price'],
         discountedPrice: cardProducts[index]['discounted_price'],
       ),
-      itemCount: cardProducts.length,
     );
   }
 }
@@ -66,22 +63,22 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 8, right: 8),
+      padding: EdgeInsets.symmetric(horizontal: 8.w),
       child: Card(
         child: Container(
-          height: 300,
-          width: 180,
+          height: 300.h,
+          width: 180.w,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(20.r),
             color: Colors.white,
           ),
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(top: 10),
+                padding: EdgeInsets.only(top: 10.h),
                 child: Container(
-                  width: 150,
-                  height: 150,
+                  width: 150.w,
+                  height: 150.h,
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       fit: BoxFit.cover,
@@ -91,33 +88,33 @@ class ProductCard extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 18, top: 20),
+                padding: EdgeInsets.only(left: 18.w, top: 20.h),
                 child: Align(
                   alignment: Alignment.topLeft,
                   child: Text(
                     name!,
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
+                    style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.w400),
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 18),
+                padding: EdgeInsets.only(left: 18.w),
                 child: Align(
                   alignment: Alignment.topLeft,
                   child: Text(
-                    "\$"+price!,
-                    style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
+                    "\$" + price!,
+                    style: TextStyle(fontSize: 23.sp, fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 18),
+                padding: EdgeInsets.only(left: 18.w),
                 child: Align(
                   alignment: Alignment.topLeft,
                   child: Text(
-                    "\$"+discountedPrice!,
+                    "\$" + discountedPrice!,
                     style: TextStyle(
-                      fontSize: 14,
+                      fontSize: 14.sp,
                       fontWeight: FontWeight.w300,
                       decoration: TextDecoration.lineThrough,
                     ),
@@ -125,16 +122,17 @@ class ProductCard extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 10),
+                padding: EdgeInsets.only(left: 10.w),
                 child: Align(
                   alignment: Alignment.topLeft,
                   child: Row(
                     children: [
-                      Icon(Icons.star, color: Colors.amber),
+                      Icon(Icons.star, color: Colors.amber, size: 18.sp),
+                      SizedBox(width: 4.w),
                       Text(
                         "\$4.9 (256)",
                         style: TextStyle(
-                          fontSize: 14,
+                          fontSize: 14.sp,
                           fontWeight: FontWeight.w300,
                         ),
                       ),

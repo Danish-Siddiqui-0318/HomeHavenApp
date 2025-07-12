@@ -2,6 +2,7 @@ import 'package:ecomm_app/cart_page.dart';
 import 'package:ecomm_app/firstpage.dart';
 import 'package:ecomm_app/my_account_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -22,13 +23,13 @@ class _HomepageState extends State<Homepage> {
       bottomNavigationBar: Stack(
         children: [
           Container(
-            height: 130,
+            height: 130.h,
             decoration: BoxDecoration(
               color: Colors.transparent,
               boxShadow: [
                 BoxShadow(
                   color: Colors.black26,
-                  blurRadius: 20,
+                  blurRadius: 20.r,
                   offset: Offset(0, -5),
                 ),
               ],
@@ -37,14 +38,14 @@ class _HomepageState extends State<Homepage> {
 
           ClipRRect(
             borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(30),
-              topRight: Radius.circular(30),
+              topLeft: Radius.circular(30.r),
+              topRight: Radius.circular(30.r),
             ),
             child: Container(
-              height: 120,
+              height: 120.h,
               color: Colors.white,
               child: Padding(
-                padding: const EdgeInsets.only(top: 20),
+                padding: EdgeInsets.only(top: 20.h),
                 child: BottomNavigationBar(
                   onTap: (value) {
                     setState(() {
@@ -55,15 +56,24 @@ class _HomepageState extends State<Homepage> {
                   showSelectedLabels: false,
                   showUnselectedLabels: false,
                   unselectedItemColor: Colors.blueGrey,
-                  selectedItemColor: Color(0xFF156651),
+                  selectedItemColor: const Color(0xFF156651),
                   backgroundColor: Colors.transparent,
                   elevation: 0,
                   type: BottomNavigationBarType.fixed,
-                  iconSize: 35,
+                  iconSize: 35.sp,
                   items: const [
-                    BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: "Home"),
-                    BottomNavigationBarItem(icon: Icon(Icons.shopping_cart_outlined), label: "My Cart"),
-                    BottomNavigationBarItem(icon: Icon(Icons.person_outline), label: "My Account"),
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.home_outlined),
+                      label: "Home",
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.shopping_cart_outlined),
+                      label: "My Cart",
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.person_outline),
+                      label: "My Account",
+                    ),
                   ],
                 ),
               ),
