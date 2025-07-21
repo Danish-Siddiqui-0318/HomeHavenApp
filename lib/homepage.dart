@@ -23,7 +23,7 @@ class _HomepageState extends State<Homepage> {
       bottomNavigationBar: Stack(
         children: [
           Container(
-            height: 130.h,
+            height: 85.h,
             decoration: BoxDecoration(
               color: Colors.transparent,
               boxShadow: [
@@ -42,7 +42,7 @@ class _HomepageState extends State<Homepage> {
               topRight: Radius.circular(30.r),
             ),
             child: Container(
-              height: 120.h,
+              height: 85.h,
               color: Colors.white,
               child: Padding(
                 padding: EdgeInsets.only(top: 20.h),
@@ -60,7 +60,7 @@ class _HomepageState extends State<Homepage> {
                   backgroundColor: Colors.transparent,
                   elevation: 0,
                   type: BottomNavigationBarType.fixed,
-                  iconSize: 35.sp,
+                  iconSize: 25.sp,
                   items: const [
                     BottomNavigationBarItem(
                       icon: Icon(Icons.home_outlined),

@@ -20,7 +20,7 @@ class accountPage extends StatelessWidget {
     "Saved Address",
     "Payment Methods",
     "Notification",
-    "Security"
+    "Security",
   ];
 
   @override
@@ -107,12 +107,19 @@ class accountPage extends StatelessWidget {
                             ),
                             Text(
                               "claire.cooper@mail.com",
-                              style: TextStyle(color: Colors.grey[600], fontSize: 14.sp),
+                              style: TextStyle(
+                                color: Colors.grey[600],
+                                fontSize: 14.sp,
+                              ),
                             ),
                           ],
                         ),
                         Spacer(),
-                        Icon(Icons.edit_outlined, color: Colors.grey[800], size: 20.sp),
+                        Icon(
+                          Icons.edit_outlined,
+                          color: Colors.grey[800],
+                          size: 20.sp,
+                        ),
                       ],
                     ),
                   ),
